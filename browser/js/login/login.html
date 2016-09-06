@@ -13,6 +13,7 @@
             <label for="login-password">Password</label>
             <input type="password" ng-model="login.password" class="form-control" id="login-password" placeholder="Password">
         </div>
+        <p ui-sref="reset" style="cursor: pointer">forget your password?</p>
         <div class="login-btn-group">
             <button type="submit" class="col s6 btn btn-default">Submit</button>
             <button class="col s6 btn btn-default" ui-sref="signup">Sign Up</button>
@@ -20,9 +21,9 @@
 
     </form>
 
-    <p ui-sref="reset">forget your password?</p>
 
-    <div class="auth-btn-group right">
+
+    <div class="auth-btn-group left">
         <p><oauth-button provider-name="Google"></oauth-button></p>
         <!-- <p><oauth-button provider-name="Twitter"></oauth-button></p> -->
         <p><oauth-button provider-name="Facebook"></oauth-button></p>

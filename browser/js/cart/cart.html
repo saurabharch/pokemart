@@ -1,23 +1,23 @@
 <div>
 	<div ng-repeat="cart in cartContent" class="row cart-entry-wrapper">
 		<div class="col s12 m12 l2 center">
-            <img class="cart-thumbnail" src='http://pokeapi.co/media/img/{{cart.productId}}.png'/>
+            <img class="cart-thumbnail" style="margin-top: 35px;" src='https://img.pokemondb.net/sprites/black-white/anim/normal/{{cart.title.toLowerCase()}}.gif'/>
         </div>
 		<h6 class="cart-entry-item col s12 m12 l2 center">{{cart.title}}</h6>
         <div class="col s12 m12 l2 center quantity-btn">
-			<h6 class="cart-entry-item"><span class="btn-small" ng-click="changeQuantity(cart.id,cart.quantity,'subtract')">-</span>
+			<h6 class="cart-entry-item" style="cursor: pointer"><span class="btn-small" ng-click="changeQuantity(cart.id,cart.quantity,'subtract')">-</span>
 			{{cart.quantity}}
 			<span class="btn-small" ng-click="changeQuantity(cart.id,cart.quantity,'add')">+</span></h6>
         </div>
 		<h6 class="cart-entry-item col s12 m12 l2 center">${{cart.price * cart.quantity}}</h6>
-		<button class="cart-entry-item col s12 m12 l4 center btn" ng-click="remove(cart.id)">Remove from Cart</button>
+		<button class="cart-entry-item col s12 m12 l4 center btn-flat" style="margin-top: 40px" ng-click="remove(cart.id)">Remove from Cart</button>
 	</div>
 </div>
 
-<div class="row">
+<div class="row" style="margin-top: 50px;">
     <div class="col s12 m12 l8"></div>
     <h5 class=" col s12 m12 l2 center">Total: $ {{total()}}</h5>
-    <a ui-sref='checkout' class="btn red lighten-2 col s12 m12 l2">Checkout</a>
+    <a ui-sref='checkout' style="margin-top: 7px;" class="btn teal col s12 m12 l2">Checkout</a>
 </div>
 
 
